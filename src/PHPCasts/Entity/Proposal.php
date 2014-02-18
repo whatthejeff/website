@@ -30,6 +30,11 @@ class Proposal
     protected $name;
 
     /**
+     * @var string
+     */
+    protected $description;
+
+    /**
      * @var int
      */
     protected $votes;
@@ -64,6 +69,22 @@ class Proposal
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 
     /**

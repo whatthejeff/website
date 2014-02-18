@@ -13,8 +13,10 @@
         </id>
 
         <field name="name" column="name" type="string" nullable="false" />
-        
+
         <field name="votes" column="votes" type="integer" nullable="false" />
+
+        <field name="description" column="description" type="text" nullable="false" />
 
     </entity>
 
