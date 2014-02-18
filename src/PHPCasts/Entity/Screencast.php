@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace PHPCast\Entity;
+namespace PHPCasts\Entity;
 
 /**
  * Class Screencast
