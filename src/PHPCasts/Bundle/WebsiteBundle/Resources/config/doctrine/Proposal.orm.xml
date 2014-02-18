@@ -18,6 +18,8 @@
 
         <field name="votes" column="votes" type="integer" nullable="false" />
 
+        <field name="createdAt" column="created_at" type="datetime" nullable="false" />
+
     </entity>
 
 </doctrine-mapping>

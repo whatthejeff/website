@@ -13,7 +13,7 @@ body {
 }
 
 .big-header {
-    padding: 0;
+    padding: 25px 0;
 }
 
 .proposal {
@@ -22,7 +22,7 @@ body {
 }
 
 .presentation {
-    padding: 75px 0 25px;
+    padding: 50px 0 25px;
     width: 100%;
     text-align: center;
     background-color: #e74c3c;

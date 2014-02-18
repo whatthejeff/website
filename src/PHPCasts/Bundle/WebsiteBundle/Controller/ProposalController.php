@@ -37,6 +37,8 @@ class ProposalController extends Controller
             } catch (\Exception $e) {
                 var_dump($e->getMessage()); exit;
             }
+
+            return $this->redirect($this->generateUrl('php_casts_website_proposal_list'));
         }
 
         return $this->render('@PHPCastsWebsite/Proposal/create.html.twig', [

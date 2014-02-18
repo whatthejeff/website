@@ -35,6 +35,11 @@ class Proposal
     protected $description;
 
     /**
+     * @var \DateTime
+     */
+    protected $createdAt;
+
+    /**
      * @var int
      */
     protected $votes;
@@ -74,6 +79,22 @@ class Proposal
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     */
+    public function setCreatedAt(\DateTime $createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 
     /**
