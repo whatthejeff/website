@@ -26,7 +26,7 @@
                     {% for proposal in proposals %}
                         <tr>
                             <td>{{ proposal.id }}</td>
-                            <td>{{ proposal.votes }}</td>
+                            <td><span class="badge">{{ proposal.votes }}</span></td>
                             <td>{% if date(proposal.createdAt) > date('-3days') %}<span class="label label-primary">{{ 'phpcasts.website.home.proposals.table.label.new'|trans  }}</span>{% endif %} {{ proposal.name }}</td>
                             <td>{{ proposal.createdAt|date('M d Y') }}</td>
                             <td>
