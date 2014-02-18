@@ -37,6 +37,8 @@ class ProposalController extends Controller
             var_dump($e->getMessage()); exit;
         }
 
-        return $this->redirect($this->generateUrl('php_casts_website_homepage'), Response::HTTP_CREATED);
+        return $this->render('@PHPCastsWebsite/Default/index.html.twig', [
+            'proposalForm' => $form->createView()
+        ]);
     }
 }
