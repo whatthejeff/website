@@ -1,28 +1,27 @@
 {% extends 'PHPCastsWebsiteBundle:Layout:base.html.twig' %}
 
 {% block bigHeader %}
-<div class="presentation">
-    <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo-white.png') }}" width="250" alt="" />
-    <p>
-        {{ 'phpcasts.website.home.presentation.intro'|trans }}
-    </p>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active presentation">
+            <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo-white.png') }}" width="250" alt="" />
+            <h2>The right place to find and ask for <br />screencasts <i class="fa fa-video-camera"></i> about PHP on the web.</h2>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
 </div>
 {% endblock %}
 
 {% block content %}
-<div class="proposal">
-    <h2 class="uppercase"><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.home.proposal.call'|trans }}</h2>
-    <form action="{{ path('php_casts_website_proposal_create') }}" role="form" method="post">
-        <div class="form-group">
-            {{ form_widget(proposalForm.name, {'attr': {'class': 'form-control', 'placeholder': 'phpcasts.website.home.proposal.name'|trans }}) }}
-        </div>
-        <div class="form-group">
-            {{ form_widget(proposalForm.description, {'attr': {'class': 'form-control', 'rows': 10, 'placeholder': 'phpcasts.website.home.proposal.description'|trans }}) }}
-        </div>
-        <button type="submit" class="btn btn-default btn-lg uppercase"><i class="fa fa-cloud-upload"></i> {{ 'phpcasts.website.home.proposal.submit'|trans }}</button>
-    </form>
-</div>
-<div class="proposals">
 
-</div>
 {% endblock content %}
