@@ -20,9 +20,12 @@ class ProposalType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', 'text')
-            ->add('description', 'textarea')
-            ->add('submit', 'submit')
+            ->add('name', 'text', [
+                'label' => false,
+            ])
+            ->add('description', 'textarea', [
+                'label' => false,
+            ])
         ;
     }
 

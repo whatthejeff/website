@@ -1,0 +1,36 @@
+body {
+    color: #666 !important;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.content {
+    padding: 80px 15px;
+    text-align: center;
+}
+
+.proposal, .presentation {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.presentation p {
+    margin-bottom: 15px !important;
+}
+
+.proposal h2 {
+    color: #e74c3c;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.proposal button[type="submit"] {
+    width: 100%;
+    background-color: #e74c3c;
+    border: 0;
+    color: white;
+    font-weight: 300;
+}
