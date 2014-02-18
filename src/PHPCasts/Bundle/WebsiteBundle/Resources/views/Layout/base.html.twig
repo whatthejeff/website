@@ -37,9 +37,14 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Submit a proposal</a></li>
-                        <li class="disabled"><a href="#about">Send your screencast</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li class="active"><a href="{{ path('php_casts_website_proposal_create') }}">{{ 'phpcasts.website.navigation.submitProposal'|trans }}</a></li>
+                        <li><a href="{{ path('php_casts_website_proposal_list') }}">{{ 'phpcasts.website.navigation.viewSubmissions'|trans }}</a></li>
+                        <li><a href="{{ path('php_casts_website_screencast_list') }}">{{ 'phpcasts.website.navigation.viewPublishedScreencasts'|trans }}</a></li>
+                        <li class="disabled"><a href="">{{ 'phpcasts.website.navigation.sendYourScreencast'|trans }}</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="http://github.com/phpcasts/website">{{ 'phpcasts.website.navigation.contribute'|trans }}</a></li>
+                        <li><a href="{{ path('php_casts_website_about') }}">{{ 'phpcasts.website.navigation.aboutUs'|trans }}</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -49,15 +54,21 @@
             {% block bigHeader %}{% endblock %}
         </div>
 
-        <div class="content">
-            {% block content %}{% endblock %}
+        <div class="container">
+            <div class="row">
+                {% block content %}{% endblock %}
+            </div>
         </div>
 
-
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
+
+        {% block javascripts %}
+            {% javascripts
+                '@PHPCastsWebsiteBundle/Resources/public/assets/bootstrap/js/bootstrap.min.js'
+                '@PHPCastsWebsiteBundle/Resources/public/js/main.js'
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
     </body>
 </html>

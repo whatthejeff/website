@@ -4,9 +4,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
+    <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/proposal.xml" prefix="/proposals" />
+    <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/screencast.xml" prefix="/screencast" />
+
     <route id="php_casts_website_homepage" pattern="/">
         <default key="_controller">PHPCastsWebsiteBundle:Default:index</default>
     </route>
 
-    <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/proposal.xml" prefix="/proposals" />
+    <route id="php_casts_website_about" pattern="/about">
+        <default key="_controller">PHPCastsWebsiteBundle:Default:about</default>
+    </route>
+
 </routes>

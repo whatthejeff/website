@@ -18,4 +18,9 @@ class DefaultController extends Controller
             'proposalForm' => $proposalForm->createView(),
         ]);
     }
+
+    public function aboutAction()
+    {
+        return $this->render('PHPCastsWebsiteBundle:Default:about.html.twig');
+    }
 }

@@ -7,9 +7,8 @@ body {
     text-transform: uppercase;
 }
 
-.content {
-    padding: 15px;
-    text-align: center;
+.container {
+    width: 1170px;
 }
 
 .big-header {
@@ -42,8 +41,7 @@ body {
 }
 
 .proposals {
-    margin: 0 auto;
-    width: 900px;
+    margin: 25px auto;
 }
 
 .proposal button[type="submit"] {
@@ -52,10 +50,6 @@ body {
     border: 0;
     color: white;
     font-weight: 300;
-}
-
-.proposals .panel {
-    margin: 25px;
 }
 
 .proposals .panel-heading {
