@@ -4,9 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="php_casts_website_homepage" pattern="/">
-        <default key="_controller">PHPCastsWebsiteBundle:Default:index</default>
+    <route id="php_casts_website_proposal_create" pattern="/create" methods="POST">
+        <default key="_controller">PHPCastsWebsiteBundle:Proposal:create</default>
     </route>
-
-    <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/proposal.xml" prefix="/proposal" />
 </routes>
