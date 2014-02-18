@@ -7,8 +7,8 @@ body {
     text-transform: uppercase;
 }
 
-.container {
-    width: 1170px;
+.content {
+    margin: 25px auto;
 }
 
 .big-header {
@@ -40,10 +40,6 @@ body {
     margin-bottom: 10px;
 }
 
-.proposals {
-    margin: 25px auto;
-}
-
 .proposal button[type="submit"] {
     width: 100%;
     background-color: #e74c3c;
@@ -53,6 +49,7 @@ body {
 }
 
 .proposals .panel-heading {
+    text-align: center;
     font-weight: 700 !important;
 }
 

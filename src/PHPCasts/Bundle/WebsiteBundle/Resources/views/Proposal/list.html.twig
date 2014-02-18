@@ -12,14 +12,14 @@
         <div class="panel panel-default">
             <div class="panel-heading uppercase">{{ 'phpcasts.website.home.proposals.header'|trans }}</div>
 
-            <table class="table table-bordered">
+            <table class="table table-hover">
                 <thead>
                     <tr class="uppercase">
                         <th width="5%"><i class="fa fa-barcode"></i></th>
                         <th width="15%"><i class="fa fa-sort-amount-desc"></i> {{ 'phpcasts.website.home.proposals.table.header.votes'|trans }}</th>
                         <th><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.home.proposals.table.header.name'|trans }}</th>
                         <th><i class="fa fa-calendar"></i> {{ 'phpcasts.website.home.proposals.table.header.createdAt'|trans }}</th>
-                        <th width="15%"><i class="fa fa-th-large"></i> {{ 'phpcasts.website.home.proposals.table.header.actions'|trans }}</th>
+                        <th width="11%"><i class="fa fa-th-large"></i> {{ 'phpcasts.website.home.proposals.table.header.actions'|trans }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,9 +33,6 @@
                                 <button type="button" class="btn btn-success btn-xs"><i class="fa fa-thumbs-o-up"></i> {{ 'phpcasts.website.home.proposals.table.actions.up'|trans }}</button>
                                 <button type="button" class="btn btn-info btn-xs"><i class="fa fa-bars"></i> {{ 'phpcasts.website.home.proposals.table.actions.details'|trans }}</button>
                             </td>
-                        </tr>
-                        <tr>
-                            <td colspan="5">{{ proposal.description }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
