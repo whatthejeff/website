@@ -3,6 +3,10 @@ body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
 }
 
+.navbar-fixed-top {
+    border-width: 0 !important;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -38,6 +42,7 @@ body {
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .proposal button[type="submit"] {
