@@ -16,7 +16,7 @@
 
         <field name="description" column="description" type="text" nullable="false" />
 
-        <field name="votes" column="votes" type="integer" nullable="true" />
+        <field name="votes" column="votes" type="integer" nullable="false" />
 
     </entity>
 

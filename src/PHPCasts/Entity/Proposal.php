@@ -39,6 +39,11 @@ class Proposal
      */
     protected $votes;
 
+    public function __construct()
+    {
+        $this->votes = 0;
+    }
+
     /**
      * @param int $id
      */

@@ -10,12 +10,15 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        $proposals = $this->getDoctrine()->getRepository('Entity:Proposal')->findAll();
+
         $proposalForm = $this->createForm(new ProposalType(), new Proposal(), [
             'action' => $this->generateUrl('php_casts_website_proposal_create'),
         ]);
 
         return $this->render('PHPCastsWebsiteBundle:Default:index.html.twig', [
-            'proposalForm' => $proposalForm->createView()
+            'proposals' => $proposals,
+            'proposalForm' => $proposalForm->createView(),
         ]);
     }
 }

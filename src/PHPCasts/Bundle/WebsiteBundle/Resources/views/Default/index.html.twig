@@ -4,4 +4,13 @@
 <div class="proposal">
     {{ form(proposalForm) }}
 </div>
+<div class="proposals">
+    {% for proposal in proposals %}
+        <article>
+            <h1>{{ proposal.name }}</h1>
+            <p>{{ proposal.description }}</p>
+            <span class="votes">{{ proposal.votes }}</span>
+        </article>
+    {% endfor %}
+</div>
 {% endblock content %}
