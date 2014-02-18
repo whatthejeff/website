@@ -1,0 +1,26 @@
+{% extends 'PHPCastsWebsiteBundle:Layout:base.html.twig' %}
+
+{% block content %}
+    <div class="presentation">
+        <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo.png') }}" width="250" alt="" />
+        <p>
+            {{ 'phpcasts.website.home.presentation.intro'|trans }}
+        </p>
+    </div>
+
+    <div class="proposal">
+        <h2 class="uppercase"><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.home.proposal.call'|trans }}</h2>
+        <form action="{{ path('php_casts_website_proposal_create') }}" role="form" method="post">
+            <div class="form-group">
+                {{ form_widget(proposalForm.name, {'attr': {'class': 'form-control', 'placeholder': 'phpcasts.website.home.proposal.name'|trans }}) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(proposalForm.description, {'attr': {'class': 'form-control', 'rows': 10, 'placeholder': 'phpcasts.website.home.proposal.description'|trans }}) }}
+            </div>
+            <button type="submit" class="btn btn-default btn-lg uppercase"><i class="fa fa-cloud-upload"></i> {{ 'phpcasts.website.home.proposal.submit'|trans }}</button>
+        </form>
+    </div>
+    <div class="proposals">
+
+    </div>
+{% endblock content %}

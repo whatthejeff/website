@@ -4,7 +4,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="php_casts_website_proposal_create" pattern="/create" methods="POST">
+    <route id="php_casts_website_proposal_list" pattern="/" methods="GET">
+        <default key="_controller">PHPCastsWebsiteBundle:Proposal:list</default>
+    </route>
+
+    <route id="php_casts_website_proposal_create" pattern="/create">
         <default key="_controller">PHPCastsWebsiteBundle:Proposal:create</default>
     </route>
 </routes>

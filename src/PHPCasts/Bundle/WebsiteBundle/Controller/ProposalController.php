@@ -22,23 +22,34 @@ class ProposalController extends Controller
     {
         $form = $this->createForm(new ProposalType(), $proposal = new Proposal());
 
-        try {
-            $submit = $form->handleRequest($this->getRequest());
-        } catch (\Exception $e) {
-            var_dump($e->getMessage()); exit;
+        if ($this->getRequest()->isMethod('POST')) {
+            try {
+                $submit = $form->handleRequest($this->getRequest());
+            } catch (\Exception $e) {
+                var_dump($e->getMessage()); exit;
+            }
+
+            $em = $this->get('doctrine.orm.entity_manager');
+
+            try {
+                $em->persist($proposal);
+                $em->flush();
+            } catch (\Exception $e) {
+                var_dump($e->getMessage()); exit;
+            }
         }
 
-        $em = $this->get('doctrine.orm.entity_manager');
-
-        try {
-            $em->persist($proposal);
-            $em->flush();
-        } catch (\Exception $e) {
-            var_dump($e->getMessage()); exit;
-        }
-
-        return $this->render('@PHPCastsWebsite/Default/index.html.twig', [
+        return $this->render('@PHPCastsWebsite/Proposal/create.html.twig', [
             'proposalForm' => $form->createView()
+        ]);
+    }
+
+    public function listAction()
+    {
+        $proposals = $this->getDoctrine()->getRepository('Entity:Proposal')->findBy([], ['votes' => 'desc']);
+
+        return $this->render('@PHPCastsWebsite/Proposal/list.html.twig', [
+            'proposals' => $proposals,
         ]);
     }
 }

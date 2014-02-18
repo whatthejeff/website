@@ -8,5 +8,5 @@
         <default key="_controller">PHPCastsWebsiteBundle:Default:index</default>
     </route>
 
-    <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/proposal.xml" prefix="/proposal" />
+    <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/proposal.xml" prefix="/proposals" />
 </routes>
