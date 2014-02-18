@@ -65,7 +65,7 @@ doctrine:
                         type: xml
                         dir: %kernel.root_dir%/../src/PHPCasts/Bundle/WebsiteBundle/Resources/config/doctrine
                         alias: Entity
-                        prefix: PHPCast\Entity
+                        prefix: PHPCasts\Entity
                         is_bundle: false
 
 # Swiftmailer Configuration

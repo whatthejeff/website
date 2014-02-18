@@ -12,12 +12,12 @@
 namespace PHPCasts\Entity;
 
 /**
- * Class Screencast
+ * Class Proposal
  *
  * @author Daniel Ribeiro <drgomesp@gmail.com>
- * @package PHPCast\Entity
+ * @package PHPCasts\Entity
  */
-class Screencast
+class Proposal
 {
     /**
      * @var int
@@ -28,6 +28,11 @@ class Screencast
      * @var string
      */
     protected $name;
+
+    /**
+     * @var int
+     */
+    protected $votes;
 
     /**
      * @param int $id
@@ -59,5 +64,21 @@ class Screencast
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @param int $votes
+     */
+    public function setVotes($votes)
+    {
+        $this->votes = $votes;
+    }
+
+    /**
+     * @return int
+     */
+    public function getVotes()
+    {
+        return $this->votes;
     }
 }
