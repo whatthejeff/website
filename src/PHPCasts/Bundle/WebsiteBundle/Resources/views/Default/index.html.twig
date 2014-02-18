@@ -1,13 +1,15 @@
 {% extends 'PHPCastsWebsiteBundle:Layout:base.html.twig' %}
 
-{% block content %}
+{% block bigHeader %}
 <div class="presentation">
-    <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo.png') }}" width="250" alt="" />
+    <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo-white.png') }}" width="250" alt="" />
     <p>
         {{ 'phpcasts.website.home.presentation.intro'|trans }}
     </p>
 </div>
+{% endblock %}
 
+{% block content %}
 <div class="proposal">
     <h2 class="uppercase"><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.home.proposal.call'|trans }}</h2>
     <form action="{{ path('php_casts_website_proposal_create') }}" role="form" method="post">

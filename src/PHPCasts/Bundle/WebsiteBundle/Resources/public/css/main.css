@@ -8,23 +8,37 @@ body {
 }
 
 .content {
-    padding: 80px 15px;
+    padding: 15px;
     text-align: center;
 }
 
-.proposal, .presentation {
+.big-header {
+    padding: 0;
+}
+
+.proposal {
     margin: 0 auto;
     width: 500px;
 }
 
+.presentation {
+    padding: 75px 0 25px;
+    width: 100%;
+    text-align: center;
+    background-color: #e74c3c;
+}
+
 .presentation p {
-    margin-bottom: 15px !important;
+    width: 700px;
+    margin: 0 auto;
+    color: white;
 }
 
 .proposal h2 {
     color: #e74c3c;
     font-size: 25px;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .proposals {

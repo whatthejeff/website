@@ -1,10 +1,12 @@
 {% extends 'PHPCastsWebsiteBundle:Layout:base.html.twig' %}
 
-{% block content %}
-<div class="presentation">
-    <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo.png') }}" width="150" alt="" />
-</div>
+{% block bigHeader %}
+    <div class="presentation">
+        <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo-white.png') }}" width="150" alt="" />
+    </div>
+{% endblock %}
 
+{% block content %}
 <div class="proposals">
     <div class="panel panel-default">
         <div class="panel-heading uppercase">{{ 'phpcasts.website.home.proposals.header'|trans }}</div>
