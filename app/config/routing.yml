@@ -1,0 +1,4 @@
+php_cast_website:
+    resource: "@PHPCastWebsiteBundle/Resources/config/routing.xml"
+    prefix:   /
+
