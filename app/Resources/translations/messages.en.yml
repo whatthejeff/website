@@ -5,9 +5,20 @@ phpcasts.website.navigation.sendYourScreencast: Send your screencast
 phpcasts.website.navigation.aboutUs: About us
 phpcasts.website.navigation.contribute: Contribute
 
-phpcasts.website.home.presentation.intro: Want us to record a screencast about PHP for you? Sure! Just submit the proposal on the form above. As soon as your submission receives a good amount of votes from the community, we will record and publish it!
+
+phpcasts.website.home.presentation.1.title: Relevant content
+phpcasts.website.home.presentation.1.text-line-1: Submit a screencast proposal for the
+phpcasts.website.home.presentation.1.text-line-2: community to vote and we'll record it!
+phpcasts.website.home.presentation.2.title: Community decides
+phpcasts.website.home.presentation.2.text-line-1: If other people like your proposal
+phpcasts.website.home.presentation.2.text-line-2: and vote for it, we'll record it!
+phpcasts.website.home.presentation.3.title: We record and publish!
+phpcasts.website.home.presentation.3.text-line-1: When a screencast proposal reach a pre-defined
+phpcasts.website.home.presentation.3.text-line-2: amount of votes, we record and publish it
 
 phpcasts.website.home.latestTweets: Latest tweets
+
+phpcasts.website.footer.allRightsReserved: All rights reserved.
 
 phpcasts.website.home.proposal.call: Submit your  proposal now!
 phpcasts.website.home.proposal.name: Name (e.g. Building a decoupled application with Symfony 2.x)
