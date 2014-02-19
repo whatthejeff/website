@@ -52,7 +52,7 @@ html {
 
 .content {
     padding: 25px 0 75px;
-    margin: 25px auto;
+    margin: 0 auto 25px;
 }
 
 .content h3 {
@@ -66,17 +66,19 @@ html {
     padding: 25px 0 0;
 }
 
-.proposal {
-    margin: 0 auto;
-    width: 500px;
-}
-
 .presentation {
     height: 550px;
     padding: 50px 0 25px;
     width: 100%;
     text-align: center;
     background-color: #e74c3c;
+}
+
+.header-submit {
+    height: 225px !important;
+    padding: 20px 0 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
 }
 
 .presentation img {
@@ -164,7 +166,7 @@ html {
 
 .proposal h2 {
     color: #e74c3c;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 25px;
     text-align: center;

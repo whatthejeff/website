@@ -1,22 +1,25 @@
 {% extends 'PHPCastsWebsiteBundle:Layout:base.html.twig' %}
 
-{% block content %}
-    <p style="margin: 10px auto; width: 500px;">
-        {{ 'phpcasts.website.home.presentation.intro'|trans }}
-    </p>
-    <div class="proposal">
-        <h2 class="uppercase"><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.home.proposal.call'|trans }}</h2>
-        <form action="{{ path('php_casts_website_proposal_create') }}" role="form" method="post">
-            <div class="form-group">
-                {{ form_widget(proposalForm.name, {'attr': {'class': 'form-control', 'placeholder': 'phpcasts.website.home.proposal.name'|trans }}) }}
-            </div>
-            <div class="form-group">
-                {{ form_widget(proposalForm.description, {'attr': {'class': 'form-control', 'rows': 10, 'placeholder': 'phpcasts.website.home.proposal.description'|trans }}) }}
-            </div>
-            <button type="submit" class="btn btn-default btn-lg uppercase"><i class="fa fa-cloud-upload"></i> {{ 'phpcasts.website.home.proposal.submit'|trans }}</button>
-        </form>
-    </div>
-    <div class="proposals">
+{% block bigHeader %}
+<div class="presentation-1 header-submit"></div>
+{% endblock %}
 
-    </div>
+{% block content %}
+
+<div class="proposal col-md-12">
+    <h2 class="uppercase"><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.home.proposal.call'|trans }}</h2>
+    <form action="{{ path('php_casts_website_proposal_create') }}" role="form" method="post">
+        <div class="form-group">
+            {{ form_widget(proposalForm.name, {'attr': {'class': 'form-control input-lg', 'placeholder': 'phpcasts.website.home.proposal.name'|trans }}) }}
+        </div>
+        <div class="form-group">
+            {{ form_widget(proposalForm.description, {'attr': {'class': 'form-control input-lg', 'rows': 10, 'placeholder': 'phpcasts.website.home.proposal.description'|trans }}) }}
+        </div>
+        <button type="submit" class="btn btn-default btn-lg uppercase"><i class="fa fa-cloud-upload"></i> {{ 'phpcasts.website.home.proposal.submit'|trans }}</button>
+    </form>
+</div>
+<div class="proposals">
+
+</div>
+
 {% endblock content %}
