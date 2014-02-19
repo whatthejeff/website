@@ -169,7 +169,7 @@ html {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 25px;
-    text-align: center;
+    text-align: left;
 }
 
 .proposal button[type="submit"] {
