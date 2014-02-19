@@ -12,6 +12,11 @@ body {
     border-width: 0 !important;
 }
 
+.navbar-fixed-top img {
+    position: relative;
+    top: -4px;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -59,7 +64,7 @@ body {
 
 .presentation .text {
     color: #e74c3c;
-    margin-top: 125px;
+    margin-top: 105px;
 }
 
 .presentation h4 {
@@ -81,7 +86,7 @@ body {
 }
 
 .presentation a {
-    margin-top: 20px;
+    margin-top: 45px;
     font-size: 23px;
 }
 
