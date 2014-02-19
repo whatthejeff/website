@@ -31,7 +31,7 @@ body {
 }
 
 .presentation {
-    height: 470px;
+    height: 550px;
     padding: 50px 0 25px;
     width: 100%;
     text-align: center;
@@ -39,7 +39,11 @@ body {
 }
 
 .presentation img {
+    width: 100%;
+    position: relative;
+    top: -470px;
     margin: 0 auto;
+    opacity: 0.60;
 }
 
 .presentation h2 {
@@ -53,8 +57,68 @@ body {
     color: white;
 }
 
+.presentation .text {
+    color: #e74c3c;
+    margin-top: 125px;
+}
+
 .presentation h4 {
     color: white;
+}
+
+.presentation .text h2 {
+    text-shadow: 0.05em 0.05em 0.05em white;
+    font-size: 65px;
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.presentation .text h3 {
+    text-shadow: 0.05em 0.05em 0.05em white;
+    color: #e74c3c;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.presentation a {
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.carousel-indicators .active {
+    background-color: #e74c3c !important;
+}
+
+.carousel-indicators li {
+    border-color: #e74c3c !important;
+}
+
+.carousel-control {
+    color: #e74c3c !important;
+}
+
+.presentation-1 {
+    background-image: url('../img/phpcasts-presentation-1.jpg');
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 7px;
+}
+
+.presentation-2 {
+    background-image: url('../img/phpcasts-presentation-2.jpg');
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 7px;
+}
+
+.presentation-3 {
+    background-image: url('../img/phpcasts-presentation-3.jpg');
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 7px;
 }
 
 .proposal h2 {

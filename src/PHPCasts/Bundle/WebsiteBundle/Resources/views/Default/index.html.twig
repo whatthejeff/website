@@ -8,9 +8,30 @@
         <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
     </ol>
     <div class="carousel-inner">
-        <div class="item active presentation">
-            <img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo-white.png') }}" width="250" alt="" />
-            <h2>The right place to find and ask for <br />screencasts <i class="fa fa-video-camera"></i> about PHP on the web.</h2>
+        {#<div class="item presentation">#}
+            {#<img src="{{ asset('bundles/phpcastswebsite/img/phpcasts-logo-white.png') }}" width="250" alt="" />#}
+            {#<h2>The right place to find and ask for <br />screencasts <i class="fa fa-video-camera"></i> about PHP on the web.</h2>#}
+        {#</div>#}
+        <div class="item active presentation presentation-1">
+            <div class="text">
+                <h2>Relevant content</h2>
+                <h3>Submit a screencast proposal for the <br />community to vote and we'll record it!</h3>
+                <a class="btn btn-danger btn-lg" href="{{ path('php_casts_website_proposal_create') }}"><i class="fa fa-cloud-upload fa-fw"></i> {{ 'phpcasts.website.navigation.submitProposal'|trans }}</a>
+            </div>
+        </div>
+        <div class="item presentation presentation-2">
+            <div class="text">
+                <h2>The community decides</h2>
+                <h3>If other people like your proposal and vote for it, we'll record it!</h3>
+                <a class="btn btn-danger btn-lg" href="{{ path('php_casts_website_proposal_list') }}"><i class="fa fa-sort-amount-desc fa-fw"></i> {{ 'phpcasts.website.navigation.viewSubmissions'|trans }}</a>
+            </div>
+        </div>
+        <div class="item presentation presentation-3">
+            <div class="text">
+                <h2>We record and publish!</h2>
+                <h3>When a screencast proposal reach a pre-defined amount of votes, we record and publish it</h3>
+                <a class="btn btn-danger btn-lg" href="{{ path('php_casts_website_screencast_list') }}"><i class="fa fa fa-video-camera fa-fw"></i> {{ 'phpcasts.website.navigation.viewPublishedScreencasts'|trans }}</a>
+            </div>
         </div>
     </div>
     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
