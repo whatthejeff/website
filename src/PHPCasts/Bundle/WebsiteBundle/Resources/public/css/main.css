@@ -190,3 +190,9 @@ html {
     text-align: left;
     vertical-align: middle !important;
 }
+
+.proposals .proposal-summary {
+    background-color: #e7e7e7;
+    padding: 5px;
+    margin: 0 0 2px;
+}
