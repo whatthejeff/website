@@ -13,9 +13,9 @@
             <table class="table table-hover">
                 <thead>
                     <tr class="uppercase">
-                        <th width="5%"><i class="fa fa-barcode"></i></th>
-                        <th width="15%"><i class="fa fa-sort-amount-desc"></i> {{ 'phpcasts.website.home.proposals.table.header.votes'|trans }}</th>
+                        <th width="10%"><i class="fa fa-barcode"> {{ 'phpcasts.website.home.proposals.table.header.code'|trans }}</i></th>
                         <th><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.home.proposals.table.header.name'|trans }}</th>
+                        <th width="10%"><i class="fa fa-sort-amount-desc"></i> {{ 'phpcasts.website.home.proposals.table.header.votes'|trans }}</th>
                         <th><i class="fa fa-calendar"></i> {{ 'phpcasts.website.home.proposals.table.header.createdAt'|trans }}</th>
                         <th width="11%"><i class="fa fa-th-large"></i> {{ 'phpcasts.website.home.proposals.table.header.actions'|trans }}</th>
                     </tr>
@@ -24,8 +24,8 @@
                     {% for proposal in proposals %}
                         <tr>
                             <td>{{ proposal.id }}</td>
-                            <td><span class="badge">{{ proposal.votes }}</span></td>
                             <td>{% if date(proposal.createdAt) > date('-3days') %}<span class="label label-primary">{{ 'phpcasts.website.home.proposals.table.label.new'|trans  }}</span>{% endif %} {{ proposal.name }}</td>
+                            <td><span class="badge">{{ proposal.votes }}</span></td>
                             <td>{{ proposal.createdAt|date('M d Y') }}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs"><i class="fa fa-thumbs-o-up"></i> {{ 'phpcasts.website.home.proposals.table.actions.up'|trans }}</button>

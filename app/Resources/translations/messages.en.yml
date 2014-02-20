@@ -28,6 +28,7 @@ phpcasts.website.home.proposal.submit: Submit screencast proposal
 phpcasts.website.home.proposals.header: In voting phase
 phpcasts.website.home.proposals.table.header.name: Screencast proposal
 phpcasts.website.home.proposals.table.header.createdAt: Submission date
+phpcasts.website.home.proposals.table.header.code: Code
 phpcasts.website.home.proposals.table.header.votes: Votes
 phpcasts.website.home.proposals.table.header.actions: Actions
 phpcasts.website.home.proposals.table.label.new: New
