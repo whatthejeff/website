@@ -12,8 +12,8 @@
             <p>{{ proposal.description }}</p>
         </div>
         <div class="progress progress-striped">
-            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ proposal.votes }}" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                <strong>Voting progress:</strong> <span>{{ proposal.votes }}/100</span>
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ proposal.votes }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proposal.votes }}%">
+                <span class="progress-text"><strong>{{ proposal.votes }} votes</strong> ({{ 100 - proposal.votes }} to go)</span>
             </div>
         </div>
         <div id="disqus_thread"></div>
