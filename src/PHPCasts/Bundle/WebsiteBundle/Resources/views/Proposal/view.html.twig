@@ -1,0 +1,35 @@
+{% extends 'PHPCastsWebsiteBundle:Layout:base.html.twig' %}
+
+{% block bigHeader %}
+    <div class="presentation-2 header-submit"></div>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-12">
+    <div class="proposal">
+        <div class="bs-callout bs-callout-info">
+            <h4><span class="label label-default">{{ 'phpcasts.website.proposal.proposal'|trans }}</span> {{ proposal.name }}</h4>
+            <p>{{ proposal.description }}</p>
+        </div>
+        <div class="progress progress-striped">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ proposal.votes }}" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                <strong>Voting progress:</strong> <span>{{ proposal.votes }}/100</span>
+            </div>
+        </div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'phpcasts'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</div>
+{% endblock content %}

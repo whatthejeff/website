@@ -45,6 +45,11 @@ class Proposal
     protected $screencast;
 
     /**
+     * @var string
+     */
+    protected $slug;
+
+    /**
      * @var int
      */
     protected $votes;
@@ -52,6 +57,7 @@ class Proposal
     public function __construct()
     {
         $this->votes = 0;
+        $this->createdAt = new \DateTime();
     }
 
     /**
@@ -132,6 +138,22 @@ class Proposal
     public function getScreencast()
     {
         return $this->screencast;
+    }
+
+    /**
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**

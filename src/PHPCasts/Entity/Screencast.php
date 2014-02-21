@@ -44,6 +44,11 @@ class Screencast
      */
     protected $url;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+    }
+
     /**
      * @param int $id
      */

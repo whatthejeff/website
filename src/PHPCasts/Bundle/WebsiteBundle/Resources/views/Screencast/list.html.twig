@@ -23,7 +23,7 @@
                     {% for screencast in screencasts %}
                         <tr>
                             <td>{% if date(screencast.createdAt) > date('-3days') %}<span class="label label-primary">{{ 'phpcasts.website.screencasts.table.label.new'|trans  }}</span>{% endif %} {{ screencast.name }}</td>
-                            <td><a href="">{{ screencast.proposal.name }}</a></td>
+                            <td><a href="{{ path('php_casts_website_proposal_view', {'slug': screencast.proposal.slug }) }}">{{ screencast.proposal.name }}</a></td>
                             <td>{{ screencast.createdAt|date('M d Y') }}</td>
                             <td>
                                 <div class="btn-group">

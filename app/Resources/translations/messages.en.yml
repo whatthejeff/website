@@ -43,3 +43,7 @@ phpcasts.website.screencasts.table.header.createdAt: Published at
 phpcasts.website.screencasts.table.header.actions: Actions
 phpcasts.website.screencasts.table.actions.watch: Watch
 phpcasts.website.screencasts.table.actions.details: Details
+
+phpcasts.website.proposal.proposal: Proposal
+phpcasts.website.proposal.votes: Votes
+phpcasts.website.proposal.description: Description

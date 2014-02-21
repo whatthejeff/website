@@ -196,3 +196,18 @@ html {
     padding: 5px;
     margin: 0 0 2px;
 }
+
+.bs-callout-info {
+    background-color: #f4f8fa;
+    border-color: #5bc0de;
+}
+
+.bs-callout h4 {
+    font-weight: 700;
+}
+
+.bs-callout {
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+}

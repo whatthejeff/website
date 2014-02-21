@@ -29,6 +29,10 @@
             </cascade>
         </one-to-one>
 
+        <field name="slug" column="slug" type="string" unique="true">
+            <gedmo:slug fields="name" unique="true" />
+        </field>
+
     </entity>
 
 </doctrine-mapping>

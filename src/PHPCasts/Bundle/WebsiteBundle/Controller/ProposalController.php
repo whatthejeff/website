@@ -35,7 +35,7 @@ class ProposalController extends Controller
                 $em->persist($proposal);
                 $em->flush();
             } catch (\Exception $e) {
-                var_dump($e->getMessage()); exit;
+                print_r($e->getMessage()); exit;
             }
 
             return $this->redirect($this->generateUrl('php_casts_website_proposal_list'));
@@ -52,6 +52,13 @@ class ProposalController extends Controller
 
         return $this->render('@PHPCastsWebsite/Proposal/list.html.twig', [
             'proposals' => $proposals,
+        ]);
+    }
+
+    public function viewAction(Proposal $proposal)
+    {
+        return $this->render('@PHPCastsWebsite/Proposal/view.html.twig', [
+            'proposal' => $proposal
         ]);
     }
 }
