@@ -4,7 +4,8 @@
     xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
-        https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+        https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd"
+    xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping">
 
     <entity name="PHPCasts\Entity\Proposal" table="Proposal">
 
@@ -18,7 +19,15 @@
 
         <field name="votes" column="votes" type="integer" nullable="false" />
 
-        <field name="createdAt" column="created_at" type="datetime" nullable="false" />
+        <field name="createdAt" column="created_at" type="datetime">
+            <gedmo:timestampable on="create"/>
+        </field>
+
+        <one-to-one field="screencast" target-entity="PHPCasts\Entity\Screencast" mapped-by="proposal">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-one>
 
     </entity>
 

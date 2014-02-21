@@ -1,0 +1,41 @@
+{% extends 'PHPCastsWebsiteBundle:Layout:base.html.twig' %}
+
+{% block bigHeader %}
+    <div class="presentation-2 header-submit"></div>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-12">
+    <div class="screencasts">
+        <div class="panel panel-default">
+            <div class="panel-heading uppercase">{{ 'phpcasts.website.screencasts.header'|trans }}</div>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr class="uppercase">
+                        <th>{{ 'phpcasts.website.screencasts.table.header.name'|trans }}</th>
+                        <th>{{ 'phpcasts.website.screencasts.table.header.proposal'|trans }}</th>
+                        <th><i class="fa fa-calendar"></i> {{ 'phpcasts.website.screencasts.table.header.createdAt'|trans }}</th>
+                        <th width="13%"><i class="fa fa-th-large"></i> {{ 'phpcasts.website.screencasts.table.header.actions'|trans }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for screencast in screencasts %}
+                        <tr>
+                            <td>{% if date(screencast.createdAt) > date('-3days') %}<span class="label label-primary">{{ 'phpcasts.website.screencasts.table.label.new'|trans  }}</span>{% endif %} {{ screencast.name }}</td>
+                            <td><a href="">{{ screencast.proposal.name }}</a></td>
+                            <td>{{ screencast.createdAt|date('M d Y') }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="{{ screencast.url }}" class="btn btn-primary btn-xs"><i class="fa fa-video-camera"></i> {{ 'phpcasts.website.screencasts.table.actions.watch'|trans }}</a>
+                                    <a class="btn btn-info btn-xs"><i class="fa fa-bars"></i> {{ 'phpcasts.website.screencasts.table.actions.details'|trans }}</a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

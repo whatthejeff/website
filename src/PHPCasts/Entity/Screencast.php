@@ -15,7 +15,7 @@ namespace PHPCasts\Entity;
  * Class Screencast
  *
  * @author Daniel Ribeiro <drgomesp@gmail.com>
- * @package PHPCast\Entity
+ * @package PHPCasts\Entity
  */
 class Screencast
 {
@@ -28,6 +28,21 @@ class Screencast
      * @var string
      */
     protected $name;
+
+    /**
+     * @var \DateTime
+     */
+    protected $createdAt;
+
+    /**
+     * @var \PHPCasts\Entity\Proposal
+     */
+    protected $proposal;
+
+    /**
+     * @var string
+     */
+    protected $url;
 
     /**
      * @param int $id
@@ -59,5 +74,53 @@ class Screencast
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     */
+    public function setCreatedAt(\DateTime $createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \PHPCasts\Entity\Proposal $proposal
+     */
+    public function setProposal(Proposal $proposal)
+    {
+        $this->proposal = $proposal;
+    }
+
+    /**
+     * @return \PHPCasts\Entity\Proposal
+     */
+    public function getProposal()
+    {
+        return $this->proposal;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 }

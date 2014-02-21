@@ -40,6 +40,11 @@ class Proposal
     protected $createdAt;
 
     /**
+     * @var \PHPCasts\Entity\Screencast
+     */
+    protected $screencast;
+
+    /**
      * @var int
      */
     protected $votes;
@@ -111,6 +116,22 @@ class Proposal
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * @param \PHPCasts\Entity\Screencast $screencast
+     */
+    public function setScreencast(Screencast $screencast)
+    {
+        $this->screencast = $screencast;
+    }
+
+    /**
+     * @return \PHPCasts\Entity\Screencast
+     */
+    public function getScreencast()
+    {
+        return $this->screencast;
     }
 
     /**
