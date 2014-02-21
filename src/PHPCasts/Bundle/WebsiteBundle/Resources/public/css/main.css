@@ -81,6 +81,13 @@ html {
     text-align: center !important;
 }
 
+.header-about-us {
+    height: 225px !important;
+    padding: 20px 0 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
 .presentation img {
     width: 100%;
     position: relative;
@@ -164,6 +171,14 @@ html {
     background-position-y: 7px;
 }
 
+.presentation-about-us {
+    background-image: url('../img/phpcasts-about-us.jpg');
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position-y: -110px;
+}
+
 .proposal h2 {
     color: #e74c3c;
     font-size: 30px;
@@ -210,4 +225,13 @@ html {
     margin: 20px 0;
     padding: 20px;
     border-left: 3px solid #eee;
+}
+
+.about {
+    text-align: justify;
+    letter-spacing: -0.06em;
+}
+
+.about img {
+    margin: 15px;
 }

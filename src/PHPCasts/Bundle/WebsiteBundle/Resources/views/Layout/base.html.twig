@@ -43,8 +43,8 @@
                         {#<li class="disabled"><a href="">{{ 'phpcasts.website.navigation.sendYourScreencast'|trans }}</a></li>#}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li {% if app.request.attributes.get('_route') == 'php_casts_website_about' %}class="active"{% endif %}><a href="{{ path('php_casts_website_about') }}">{{ 'phpcasts.website.navigation.aboutUs'|trans }}</a></li>
                         <li><a href="http://github.com/phpcasts/website">{{ 'phpcasts.website.navigation.contribute'|trans }}</a></li>
-                        <li><a href="{{ path('php_casts_website_about') }}">{{ 'phpcasts.website.navigation.aboutUs'|trans }}</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
