@@ -33,6 +33,8 @@
             <gedmo:slug fields="name" unique="true" />
         </field>
 
+        <field name="status" column="status" type="integer" nullable="false" />
+
     </entity>
 
 </doctrine-mapping>

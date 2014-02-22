@@ -19,6 +19,9 @@ namespace PHPCasts\Entity;
  */
 class Proposal
 {
+    const STATUS_VOTING = 0;
+    const STATUS_PUBLISHED = 1;
+
     /**
      * @var int
      */
@@ -54,10 +57,16 @@ class Proposal
      */
     protected $votes;
 
+    /**
+     * @var int
+     */
+    protected $status;
+
     public function __construct()
     {
         $this->votes = 0;
         $this->createdAt = new \DateTime();
+        $this->status = self::STATUS_VOTING;
     }
 
     /**
@@ -154,6 +163,22 @@ class Proposal
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 
     /**
