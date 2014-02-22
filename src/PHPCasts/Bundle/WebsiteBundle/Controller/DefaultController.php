@@ -12,7 +12,7 @@ class DefaultController extends Controller
     {
         $latestProposals = $this->getDoctrine()->getRepository('Entity:Proposal')->findBy([
             'status' => Proposal::STATUS_VOTING
-        ], ['votes' => 'desc', 'createdAt' => 'desc'], 3);
+        ], ['votes' => 'desc', 'createdAt' => 'desc'], 4);
 
         $latestScreencasts = $this->getDoctrine()->getRepository('Entity:Screencast')->findBy([
         ], ['createdAt' => 'desc'], 3);

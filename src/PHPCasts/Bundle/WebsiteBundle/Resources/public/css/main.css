@@ -258,11 +258,11 @@ h3.headline {
     padding-right: 5px;
 }
 
-.latestProposals .bs-callout {
-    padding: 1px 1px 1px 3px;
-    margin: 0 0 3px;
+.latest .bs-callout {
+    padding: 4px;
+    margin: 0 0 4px;
 }
 
-.latestProposals .item {
+.latest .item {
     margin: 5px 0;
 }

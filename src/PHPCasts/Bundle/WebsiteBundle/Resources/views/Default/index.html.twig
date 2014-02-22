@@ -53,7 +53,7 @@
 
     <div class="col-md-4">
         <h3 class="headline"><i class="fa fa-cloud-upload"></i> {{ 'phpcasts.website.home.latestProposals'|trans }}</h3>
-        <div class="latestProposals">
+        <div class="latest">
         {% for proposal in latestProposals %}
             <div class="item">
                 <div class="bs-callout bs-callout-info">
@@ -71,11 +71,15 @@
 
     <div class="col-md-4">
         <h3 class="headline"><i class="fa fa-sort-amount-desc"></i> {{ 'phpcasts.website.home.latestScreencasts'|trans }}</h3>
-        {% for screencast in latestScreencasts %}
-            <div class="item">
-                <a href="{{ screencast.url }}">{{ screencast.name }}</a>
-            </div>
-        {% endfor %}
+        <div class="latest">
+            {% for screencast in latestScreencasts %}
+                <div class="item">
+                    <div class="bs-callout bs-callout-info">
+                        <a href="{{ screencast.url }}">{{ screencast.name }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock content %}
