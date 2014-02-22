@@ -152,7 +152,7 @@ html {
     background-position-x: 0px;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position-y: 7px;
+    background-position-y: 8px;
 }
 
 .presentation-2 {
@@ -160,7 +160,7 @@ html {
     background-position-x: 0px;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position-y: 7px;
+    background-position-y: 8px;
 }
 
 .presentation-3 {
@@ -234,4 +234,8 @@ html {
 
 .about img {
     margin: 15px;
+}
+
+h3.headline {
+    color: #666;
 }
