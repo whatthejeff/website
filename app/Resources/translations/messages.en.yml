@@ -17,6 +17,8 @@ phpcasts.website.home.presentation.3.text-line-1: When a screencast proposal rea
 phpcasts.website.home.presentation.3.text-line-2: amount of votes, we record and publish it
 
 phpcasts.website.home.latestTweets: Latest tweets
+phpcasts.website.home.latestProposals: Latest proposals
+phpcasts.website.home.latestScreencasts: Latest screencasts
 
 phpcasts.website.footer.allRightsReserved: All rights reserved.
 

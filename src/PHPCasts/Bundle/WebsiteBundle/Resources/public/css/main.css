@@ -238,6 +238,7 @@ html {
 
 h3.headline {
     color: #666;
+    letter-spacing: -0.02em;
 }
 
 .page-header {
