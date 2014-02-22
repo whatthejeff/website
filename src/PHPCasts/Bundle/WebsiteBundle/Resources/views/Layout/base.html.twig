@@ -40,7 +40,7 @@
                         <li {% if app.request.attributes.get('_route') == 'php_casts_website_proposal_create' %}class="active"{% endif %}><a href="{{ path('php_casts_website_proposal_create') }}">{{ 'phpcasts.website.navigation.submitProposal'|trans }}</a></li>
                         <li {% if app.request.attributes.get('_route') == 'php_casts_website_proposal_list' %}class="active"{% endif %}><a href="{{ path('php_casts_website_proposal_list') }}">{{ 'phpcasts.website.navigation.viewSubmissions'|trans }}</a></li>
                         <li {% if app.request.attributes.get('_route') == 'php_casts_website_screencast_list' %}class="active"{% endif %}><a href="{{ path('php_casts_website_screencast_list') }}">{{ 'phpcasts.website.navigation.viewPublishedScreencasts'|trans }}</a></li>
-                        {#<li class="disabled"><a href="">{{ 'phpcasts.website.navigation.sendYourScreencast'|trans }}</a></li>#}
+                        <li class="disabled"><a href="">{{ 'phpcasts.website.navigation.sendYourScreencast'|trans }}</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li {% if app.request.attributes.get('_route') == 'php_casts_website_about' %}class="active"{% endif %}><a href="{{ path('php_casts_website_about') }}">{{ 'phpcasts.website.navigation.aboutUs'|trans }}</a></li>
