@@ -24,5 +24,11 @@
             <directory>src/</directory>
         </whitelist>
     </filter>
+
+    <logging>
+        <log type="coverage-html" target="/tmp/phpcasts/coverage/report" charset="UTF-8"
+             yui="true" highlight="false"
+             lowUpperBound="35" highLowerBound="70"/>
+    </logging>
 </phpunit>
 
