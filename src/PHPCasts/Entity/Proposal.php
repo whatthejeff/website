@@ -100,7 +100,7 @@ class Proposal
     {
         if (!is_string($name)) {
             throw new \InvalidArgumentException(sprintf(
-                    'The $name parameter should be a string. "%s" given.', $name)
+                'The $name parameter should be a string. "%s" given.', $name)
             );
         }
 

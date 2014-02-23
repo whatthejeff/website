@@ -27,6 +27,12 @@ class ProposalTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('PHPCasts\Entity\Proposal', $proposal);
     }
 
+    public function testNewProposalShouldHaveCreatedAtSet()
+    {
+        $proposal = new Proposal();
+        $this->assertAttributeInstanceOf('\DateTime', 'createdAt', $proposal);
+    }
+
     public function testNewProposalShouldHaveZeroVotes()
     {
         $proposal = new Proposal();
@@ -215,7 +221,7 @@ class ProposalTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testSetVotesWithNonIntegerhouldThrowException()
+    public function testSetVotesWithNonIntegerShouldThrowException()
     {
         $proposal = new Proposal();
         $proposal->setVotes('votes');

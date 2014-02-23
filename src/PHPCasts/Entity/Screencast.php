@@ -51,9 +51,16 @@ class Screencast
 
     /**
      * @param int $id
+     * @throws \InvalidArgumentException
      */
     public function setId($id)
     {
+        if (!is_integer($id)) {
+            throw new \InvalidArgumentException(sprintf(
+                'The $id parameter should be an integer. "%s" given.', $id)
+            );
+        }
+
         $this->id = $id;
     }
 
@@ -67,9 +74,16 @@ class Screencast
 
     /**
      * @param string $name
+     * @throws \InvalidArgumentException
      */
     public function setName($name)
     {
+        if (!is_string($name)) {
+            throw new \InvalidArgumentException(sprintf(
+                    'The $name parameter should be a string. "%s" given.', $name)
+            );
+        }
+
         $this->name = $name;
     }
 
@@ -100,7 +114,7 @@ class Screencast
     /**
      * @param \PHPCasts\Entity\Proposal $proposal
      */
-    public function setProposal(Proposal $proposal)
+    public function setProposal(Proposal $proposal = null)
     {
         $this->proposal = $proposal;
     }
@@ -115,9 +129,16 @@ class Screencast
 
     /**
      * @param string $url
+     * @throws \InvalidArgumentException
      */
     public function setUrl($url)
     {
+        if (!is_string($url)) {
+            throw new \InvalidArgumentException(sprintf(
+                    'The $url parameter should be a string. "%s" given.', $url)
+            );
+        }
+
         $this->url = $url;
     }
 
