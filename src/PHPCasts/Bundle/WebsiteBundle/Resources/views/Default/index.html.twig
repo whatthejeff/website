@@ -57,7 +57,7 @@
         {% for proposal in latestProposals %}
             <div class="item">
                 <div class="bs-callout bs-callout-info">
-                    <a href="{{ path('php_casts_website_proposal_view', {'slug': proposal.slug}) }}">{{ proposal.name }}</a>
+                    <a href="{{ path('php_casts_website_proposal_view', {'slug': proposal.slug}) }}">{{ proposal.name|length > 50 ? proposal.name|slice(0, 45) ~ '...' : proposal.name }}</a>
                 </div>
                 <div class="progress progress-striped">
                     <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ proposal.votes }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proposal.votes }}%">
@@ -75,7 +75,7 @@
             {% for screencast in latestScreencasts %}
                 <div class="item">
                     <div class="bs-callout bs-callout-info">
-                        <a href="{{ screencast.url }}">{{ screencast.name }}</a>
+                        <a href="{{ screencast.url }}">{{ screencast.name|length > 50 ? screencast.name|slice(0, 45) ~ '...' : screencast.name }}</a>
                     </div>
                 </div>
             {% endfor %}
