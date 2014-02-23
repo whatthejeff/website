@@ -2,3 +2,10 @@ php_cast_website:
     resource: "@PHPCastsWebsiteBundle/Resources/config/routing.xml"
     prefix:   /
 
+# FOSFacebookBundle
+_security_check:
+    pattern:  /loginFb
+_security_logout:
+    pattern:  /logout
+fos_facebook_channel:
+    resource: "@FOSFacebookBundle/Resources/config/routing.xml"

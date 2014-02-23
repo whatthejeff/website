@@ -7,6 +7,10 @@
     <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/proposal.xml" prefix="/proposals" />
     <import resource="@PHPCastsWebsiteBundle/Resources/config/routing/screencast.xml" prefix="/screencasts" />
 
+    <route id="php_casts_website_login_facebook" pattern="/loginFb">
+        <default key="_controller">PHPCastsWebsiteBundle:Default:loginFb</default>
+    </route>
+
     <route id="php_casts_website_homepage" pattern="/">
         <default key="_controller">PHPCastsWebsiteBundle:Default:index</default>
     </route>

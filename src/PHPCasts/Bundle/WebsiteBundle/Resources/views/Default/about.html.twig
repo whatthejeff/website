@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block content %}
-        <div class="bs-docs-section">
+    {{ facebook_login_button({'autologoutlink': true}) }}
+
+    <div class="bs-docs-section">
             <h1 id="history" class="page-header">History</h1>
 
             <p class="lead">Originally created by a designer and a developer at Twitter, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world.</p>

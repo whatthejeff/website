@@ -8,6 +8,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+    public function loginFbAction()
+    {
+
+    }
+
     public function indexAction()
     {
         $latestProposals = $this->getDoctrine()->getRepository('Entity:Proposal')->findBy([

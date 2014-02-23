@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,8 @@
 </head>
 
     <body>
+        {{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();'}) }}
+
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -93,6 +95,24 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
         {% block javascripts %}
+            <script>
+                function goLogIn(){
+                    window.location.href = "{{ path('_security_check') }}";
+                }
+
+                function onFbInit() {
+                    if (typeof(FB) != 'undefined' && FB != null ) {
+                        FB.Event.subscribe('auth.statusChange', function(response) {
+                            if (response.session || response.authResponse) {
+                                setTimeout(goLogIn, 500);
+                            } else {
+                                window.location.href = "{{ path('_security_logout') }}";
+                            }
+                        });
+                    }
+                }
+            </script>
+
             {% javascripts
                 '@PHPCastsWebsiteBundle/Resources/public/assets/bootstrap/js/bootstrap.min.js'
                 '@PHPCastsWebsiteBundle/Resources/public/js/main.js'

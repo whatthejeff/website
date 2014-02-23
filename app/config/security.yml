@@ -7,32 +7,22 @@ security:
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     providers:
-        in_memory:
-            memory:
-                users:
-                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+        phpcasts.user.facebook_provider:
+            id: phpcasts.facebook.user
 
     firewalls:
-        dev:
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
-        secured_area:
-            pattern:    ^/demo/secured/
-            form_login:
-                check_path: _security_check
-                login_path: _demo_login
-            logout:
-                path:   _demo_logout
-                target: _demo
-            #anonymous: ~
-            #http_basic:
-            #    realm: "Secured Demo Area"
+        public:
+            # since anonymous is allowed users will not be forced to login
+            pattern:   ^/.*
+            fos_facebook:
+                app_url: "http://apps.facebook.com/phpcasts/"
+                server_url: "http://localhost/facebookApp/"
+                login_path: /login
+                check_path: /loginFb
+                default_target_path: /
+                provider: phpcasts.user.facebook_provider
+            anonymous: true
 
     access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/about/.*, role: [ROLE_FACEBOOK] } # This is the route secured with fos_facebook
+        - { path: ^/.*, role: [IS_AUTHENTICATED_ANONYMOUSLY] }
